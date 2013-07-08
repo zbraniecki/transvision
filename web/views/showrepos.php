@@ -94,8 +94,7 @@ foreach ($stringCount as $locale => $numbers) {
         $confidence = 'No localization';
     }
 
-    $json[] = array(
-        'locale'     => $locale,
+    $json[$locale] = array(
         'total'      => $numbers['total'],
         'missing'    => $numbers['missing'],
         'translated' => ($numbers['total'] - $numbers['identical']),
